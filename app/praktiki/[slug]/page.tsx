@@ -23,7 +23,10 @@ export default async function PracticePage({ params }: Props) {
 
   return (
     <main className="showcase detail-page">
-      <header className="topbar"><Link href="/">ПРАКТИКИ ОТ АНДРЕЯ ОНГРИ</Link></header>
+      <header className="topbar detail-topbar">
+        <span>ПРАКТИКИ ОТ АНДРЕЯ ОНГРИ</span>
+        <Link href="/">← ВСЕ ПРАКТИКИ</Link>
+      </header>
       <section className="detail-card">
         <a className="cover" href={practice.guide} target="_blank" rel="noreferrer" aria-label={`Открыть PDF «${practice.title}»`}>
           <img src={practice.cover} alt={`Первая страница гайда «${practice.title}»`} />
