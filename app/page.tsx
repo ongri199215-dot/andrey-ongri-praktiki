@@ -1,4 +1,5 @@
 import { practices } from "../lib/practices";
+import { GuideReader } from "./guide-reader";
 
 export default function Home() {
   const practice = practices[0];
@@ -23,7 +24,7 @@ export default function Home() {
             <h2>{practice.title}</h2>
             <p>{practice.description}</p>
             <div className="actions">
-              <a href={`/praktiki/${practice.slug}`}>Открыть</a>
+              <GuideReader guideUrl={practice.guide} title={practice.title} />
               <button type="button" disabled>Скачать</button>
             </div>
             <p className="contents">Внутри: {practice.includes}</p>
