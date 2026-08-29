@@ -1,4 +1,8 @@
+import { practices } from "../lib/practices";
+
 export default function Home() {
+  const practice = practices[0];
+
   return (
     <main className="showcase">
       <header className="topbar">
@@ -11,18 +15,18 @@ export default function Home() {
 
       <section className="shelf" aria-label="Витрина практикумов">
         <article className="practice-card">
-          <a className="cover" href="/guides/7-stsenariev-spokoynogo-otkaza.pdf" target="_blank" rel="noreferrer" aria-label="Открыть гайд">
-            <img src="/covers/7-stsenariev-spokoynogo-otkaza.png" alt="Первая страница гайда «7 сценариев спокойного отказа»" />
+          <a className="cover" href={`/praktiki/${practice.slug}`} aria-label={`Открыть практику «${practice.title}»`}>
+            <img src={practice.cover} alt={`Первая страница гайда «${practice.title}»`} />
           </a>
           <div className="practice-info">
-            <p className="eyebrow">БЕСПЛАТНЫЙ PDF · 12 СТРАНИЦ</p>
-            <h2>7 сценариев спокойного отказа</h2>
-            <p>Готовые фразы для ситуаций, когда не хочется соглашаться, но страшно обидеть человека.</p>
+            <p className="eyebrow">{practice.format}</p>
+            <h2>{practice.title}</h2>
+            <p>{practice.description}</p>
             <div className="actions">
-              <a href="/guides/7-stsenariev-spokoynogo-otkaza.pdf" target="_blank" rel="noreferrer">Смотреть</a>
+              <a href={`/praktiki/${practice.slug}`}>Открыть</a>
               <button type="button" disabled>Скачать</button>
             </div>
-            <p id="sostav" className="contents">Внутри: просьбы близких, давление, работа, деньги и право передумать.</p>
+            <p className="contents">Внутри: {practice.includes}</p>
           </div>
         </article>
       </section>
