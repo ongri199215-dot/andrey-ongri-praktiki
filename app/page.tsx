@@ -25,7 +25,7 @@ export default function Home() {
             <p>{practice.description}</p>
             <div className="actions">
               <GuideReader guideUrl={practice.guide} title={practice.title} />
-              <button type="button" disabled>Скачать</button>
+              <a className="download-guide" href={practice.guide} download>Скачать</a>
             </div>
             <p className="contents">Внутри: {practice.includes}</p>
           </div>

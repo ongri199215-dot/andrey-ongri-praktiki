@@ -37,7 +37,7 @@ export default async function PracticePage({ params }: Props) {
           <p className="contents">Внутри: {practice.includes}</p>
           <div className="actions">
             <a href={practice.guide} target="_blank" rel="noreferrer">Смотреть гайд</a>
-            <button type="button" disabled>Скачать</button>
+            <a className="download-guide" href={practice.guide} download>Скачать</a>
           </div>
         </div>
       </section>
