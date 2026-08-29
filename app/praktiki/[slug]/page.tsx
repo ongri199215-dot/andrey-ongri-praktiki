@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getPractice, practices } from "../../../lib/practices";
 
@@ -25,7 +24,7 @@ export default async function PracticePage({ params }: Props) {
     <main className="showcase detail-page">
       <header className="topbar detail-topbar">
         <span>ПРАКТИКИ ОТ АНДРЕЯ ОНГРИ</span>
-        <Link href="/">← ВСЕ ПРАКТИКИ</Link>
+        <a href="https://praktiki-andreya-ongri.ongri199215.chatgpt.site/">← ВСЕ ПРАКТИКИ</a>
       </header>
       <section className="detail-card">
         <a className="cover" href={practice.guide} target="_blank" rel="noreferrer" aria-label={`Открыть PDF «${practice.title}»`}>
