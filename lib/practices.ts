@@ -5,6 +5,7 @@ export type Practice = {
   format: string;
   cover: string;
   guide: string;
+  reader: string;
   includes: string;
 };
 
@@ -16,6 +17,7 @@ export const practices: Practice[] = [
     format: "БЕСПЛАТНЫЙ PDF · 12 СТРАНИЦ",
     cover: "/covers/7-stsenariev-spokoynogo-otkaza.png",
     guide: "/guides/7-stsenariev-spokoynogo-otkaza.pdf",
+    reader: "/praktiki/7-stsenariev-spokoynogo-otkaza/read/",
     includes: "Просьбы близких, давление, работа, деньги и право передумать.",
   },
 ];

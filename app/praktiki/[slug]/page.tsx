@@ -27,7 +27,7 @@ export default async function PracticePage({ params }: Props) {
         <a href="https://praktiki-andreya-ongri.ongri199215.chatgpt.site/">← ВСЕ ПРАКТИКИ</a>
       </header>
       <section className="detail-card">
-        <a className="cover" href={practice.guide} target="_blank" rel="noreferrer" aria-label={`Открыть PDF «${practice.title}»`}>
+        <a className="cover" href={practice.reader} aria-label={`Смотреть гайд «${practice.title}»`}>
           <img src={practice.cover} alt={`Первая страница гайда «${practice.title}»`} />
         </a>
         <div className="practice-info">
@@ -36,7 +36,7 @@ export default async function PracticePage({ params }: Props) {
           <p>{practice.description}</p>
           <p className="contents">Внутри: {practice.includes}</p>
           <div className="actions">
-            <a href={practice.guide} target="_blank" rel="noreferrer">Смотреть гайд</a>
+            <a href={practice.reader}>Смотреть гайд</a>
             <a className="download-guide" href={practice.guide} download>Скачать</a>
           </div>
         </div>
