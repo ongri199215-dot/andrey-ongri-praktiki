@@ -33,10 +33,8 @@ export default async function PracticePage({ params }: Props) {
         <div className="practice-info">
           <p className="eyebrow">{practice.format}</p>
           <h1>{practice.title}</h1>
-          <p>{practice.description}</p>
-          <p className="contents">Внутри: {practice.includes}</p>
           <div className="actions">
-            <a href={practice.reader}>Смотреть гайд</a>
+            <a href={practice.reader}>Смотреть практику</a>
             <a className="download-guide" href={practice.guide} download>Скачать</a>
           </div>
         </div>
